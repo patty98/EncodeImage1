@@ -1,0 +1,10 @@
+D:\Disk D old\projects VS c++\EncodeImage\EncodeImage\bin\Debug\EncodeImage.exe.config
+D:\Disk D old\projects VS c++\EncodeImage\EncodeImage\bin\Debug\EncodeImage.exe
+D:\Disk D old\projects VS c++\EncodeImage\EncodeImage\bin\Debug\EncodeImage.pdb
+D:\Disk D old\projects VS c++\EncodeImage\EncodeImage\obj\Debug\EncodeImage.csprojAssemblyReference.cache
+D:\Disk D old\projects VS c++\EncodeImage\EncodeImage\obj\Debug\EncodeImage.Form1.resources
+D:\Disk D old\projects VS c++\EncodeImage\EncodeImage\obj\Debug\EncodeImage.Properties.Resources.resources
+D:\Disk D old\projects VS c++\EncodeImage\EncodeImage\obj\Debug\EncodeImage.csproj.GenerateResource.cache
+D:\Disk D old\projects VS c++\EncodeImage\EncodeImage\obj\Debug\EncodeImage.csproj.CoreCompileInputs.cache
+D:\Disk D old\projects VS c++\EncodeImage\EncodeImage\obj\Debug\EncodeImage.exe
+D:\Disk D old\projects VS c++\EncodeImage\EncodeImage\obj\Debug\EncodeImage.pdb
