@@ -20,7 +20,6 @@ namespace EncodeImage
         }
             Bitmap image1;
         int part = 4;
-        int len_number = 8;
         List<int[]> tablesRand_inv = new List<int[]>();
         List<int[]> tablesRand = new List<int[]>();
         private void Form1_Load(object sender, EventArgs e)
@@ -60,61 +59,65 @@ namespace EncodeImage
             sw.Close();*/
            
 
-            StreamWriter sw1 = new StreamWriter(@"D:\\R_correl_im.txt");
+           
             int n = 0;
-/*
+            /*
 
-            for (int k = 0; k < 2000; k++)
+                        for (int k = 0; k < 2000; k++)
 
+                        {
+                            for (int i = 0; i < c.Length - k; i++)
+                            {
+
+                                copy[i + k] = c[i];
+
+                            }
+                            x = 0;
+                            for (int i = 0; i < k; i++)
+                            {
+                                copy[i] = System.Drawing.Color.FromArgb(c[i + j].A, 0, 0, 0);
+                            }
+
+                            BigInteger Rk1 = new BigInteger();
+                            BigInteger Rsum = new BigInteger();
+                            Rsum = 0;
+                            Rk1 = 0;
+                            int mid = Dispersion(c, k);
+
+                            for (n = 0; n < c.Length - k; n++)
+                            {
+
+                                if (n + k < c.Length - k)
+                                {
+                                    Rk1 += (copy[n].G - mid) * (c[n].G - mid);
+
+                                }
+                                else
+                                {
+                                    break;
+                                }
+
+
+                            }
+                            sw1.WriteLine(Rk1 + "\t" + k);
+                            Rk1 = 0;
+                            Rsum = 0;
+                            n = 0;
+                     sw1.Close();
+                            }
+  */        
+         StreamWriter sw1 = new StreamWriter(@"D:\\numersmath.txt");
+
+            int[] rand_ar = new int[125023];
+            Random rand = new Random(unchecked((int)(DateTime.Now.Ticks)));
+            rand_ar = Enumerable.Range(0, 125023).OrderBy(po => rand.Next()).Take(125023).ToArray();
+
+            for(int i=0;i<rand_ar.Length;i++)
             {
-                for (int i = 0; i < c.Length - k; i++)
-                {
-
-                    copy[i + k] = c[i];
-
-                }
-                x = 0;
-                for (int i = 0; i < k; i++)
-                {
-                    copy[i] = System.Drawing.Color.FromArgb(c[i + j].A, 0, 0, 0);
-                }
-
-                BigInteger Rk1 = new BigInteger();
-                BigInteger Rsum = new BigInteger();
-                Rsum = 0;
-                Rk1 = 0;
-                int mid = Dispersion(c, k);
-
-                for (n = 0; n < c.Length - k; n++)
-                {
-
-                    if (n + k < c.Length - k)
-                    {
-                        Rk1 += (copy[n].G - mid) * (c[n].G - mid);
-
-                    }
-                    else
-                    {
-                        break;
-                    }
-
-
-                }
-                sw1.WriteLine(Rk1 + "\t" + k);
-                Rk1 = 0;
-                Rsum = 0;
-                n = 0;
+                sw1.WriteLine(rand_ar[i]);
             }
             sw1.Close();
-*/
-
-
-
-
-
-
-
-
+ 
             x = 0;
             int p = 0;
            // Tables(c);
@@ -432,7 +435,7 @@ namespace EncodeImage
             return r;
              
         }
-        private void Tables(Color[] byte_arr)
+        private void Tables(Color[] byte_arr)//данная функция нужна для генерации таблиц подстановки, потом ее просто можно не вызывать
         {
             int i = 0;
             List<int> tables = new List<int>();
@@ -443,7 +446,7 @@ namespace EncodeImage
             StringBuilder s_1 = new StringBuilder();
             bool check1 = false; 
             i = 0;
-            StreamWriter sr = new StreamWriter(@"D:\\T15.txt");
+            StreamWriter sr = new StreamWriter(@"D:\\T15.txt");//тут пишите путь к файлам таблиц подстановки
             StreamWriter sw = new StreamWriter(@"D:\\T16.txt");
             for (int count=0;count<part;count++)
         {
